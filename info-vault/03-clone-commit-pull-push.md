@@ -21,7 +21,7 @@
 
 ```mermaid
 flowchart TD
-    A["Assignmet Link"] --> B["git clone #lt;url#gt;<br/><i>once</i>"]
+    A["Assignment Link"] --> B["git clone #lt;url#gt;<br/><i>once</i>"]
     B --> C["git pull<br/><i>get latest changes</i>"]
     C --> D["Write code & test it"]
     D --> E["git add .<br/><i>stage changes</i>"]
