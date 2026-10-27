@@ -1,4 +1,4 @@
-# ⭐ Git & GitHub Cheatsheet
+# Git & GitHub Cheatsheet
 
 [← Contents](00-Table%20of%20Contents.md)
 
@@ -7,13 +7,13 @@
 
 ---
 
-## 🔁 The Everyday Loop
+## The Everyday Loop
 
-📖 Full guide: [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md)
+ Full guide: [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md)
 
 ```mermaid
 flowchart LR
-    P["git pull"] --> E["✏️ edit"]
+    P["git pull"] --> E["edit"]
     E --> A["git add ."]
     A --> C["git commit -m #quot;msg#quot;"]
     C --> U["git push"]
@@ -29,9 +29,9 @@ git push
 
 ---
 
-## ⚙️ One-Time Setup
+## One-Time Setup
 
-📖 Full guide: [One-Time Setup](02-setup.md)
+ Full guide: [One-Time Setup](02-setup.md)
 
 | Command | What it does |
 |---|---|
@@ -45,9 +45,9 @@ git push
 
 ---
 
-## 📥 Getting a Repo
+## Getting a Repo
 
-📖 Full guide: [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md)
+ Full guide: [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md)
 
 | Command | What it does |
 |---|---|
@@ -56,7 +56,7 @@ git push
 
 ---
 
-## 💾 Saving Work
+## Saving Work
 
 | Command | What it does |
 |---|---|
@@ -69,7 +69,7 @@ git push
 
 ---
 
-## ☁️ Syncing with GitHub
+## Syncing with GitHub
 
 | Command | What it does |
 |---|---|
@@ -79,9 +79,9 @@ git push
 
 ---
 
-## 🌿 Branches
+## Branches
 
-📖 Full guide: [Branches](04-branches.md)
+ Full guide: [Branches](04-branches.md)
 
 | Command | What it does |
 |---|---|
@@ -94,9 +94,9 @@ git push
 
 ---
 
-## 🔀 Pull Request Flow
+## Pull Request Flow
 
-📖 Full guide: [Pull Requests](05-pull-requests.md)
+ Full guide: [Pull Requests](05-pull-requests.md)
 
 ```bash
 git switch main && git pull              # 1. start fresh
@@ -111,14 +111,14 @@ git branch -d <branch>                   # 8. clean up
 
 ---
 
-## ↩️ Undo
+## Undo
 
-📖 Full guide: [Fixing Common Problems](06-fixing-common-problems.md)
+ Full guide: [Fixing Common Problems](06-fixing-common-problems.md)
 
 | Situation | Command |
 |---|---|
 | Unstage a file | `git restore --staged <file>` |
-| Discard uncommitted changes to a file ⚠️ | `git restore <file>` |
+| Discard uncommitted changes to a file | `git restore <file>` |
 | Fix last commit message *(not pushed)* | `git commit --amend -m "<new msg>"` |
 | Undo last commit, keep changes *(not pushed)* | `git reset --soft HEAD~1` |
 | Undo a **pushed** commit | `git revert <commit-id>` |
@@ -127,9 +127,9 @@ git branch -d <branch>                   # 8. clean up
 
 ---
 
-## 🚑 Error → Fix
+## Error → Fix
 
-📖 Full guide: [Fixing Common Problems](06-fixing-common-problems.md)
+Full guide: [Fixing Common Problems](06-fixing-common-problems.md)
 
 | You see… | Do this |
 |---|---|
@@ -144,7 +144,7 @@ git branch -d <branch>                   # 8. clean up
 
 ---
 
-## 🧠 Golden Rules
+## Golden Rules
 
 1. **`git status` is your best friend.**
 2. **Pull before you start working.**

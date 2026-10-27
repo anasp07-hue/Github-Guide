@@ -21,15 +21,15 @@
 
 ```mermaid
 flowchart TD
-    A["🔗 Accept assignment link<br/>(GitHub Classroom)"] --> B["git clone #lt;url#gt;<br/><i>once</i>"]
+    A["Assignmet Link"] --> B["git clone #lt;url#gt;<br/><i>once</i>"]
     B --> C["git pull<br/><i>get latest changes</i>"]
-    C --> D["✏️ Write code & test it"]
+    C --> D["Write code & test it"]
     D --> E["git add .<br/><i>stage changes</i>"]
     E --> F["git commit -m #quot;...#quot;<br/><i>save snapshot</i>"]
     F --> G["git push<br/><i>upload to GitHub</i>"]
     G --> H{"Done with<br/>assignment?"}
     H -- "No, keep working" --> C
-    H -- "Yes" --> I["✅ Check github.com<br/>to confirm it's there"]
+    H -- "Yes" --> I["Check github.com<br/>to confirm it's there"]
 ```
 
 ---
@@ -159,7 +159,7 @@ git commit -m "Add input validation to calculator"
 
 Your professor might actually read these. Describe **what** you did:
 
-| ❌ Bad | ✅ Good |
+| Bad | Good |
 |---|---|
 | `stuff` | `Add bubble sort implementation` |
 | `fixed it` | `Fix off-by-one error in loop` |
@@ -223,15 +223,15 @@ Run this **every time you sit down to work**, especially if:
 
 ```mermaid
 sequenceDiagram
-    participant You as 💻 Your Laptop
-    participant GH as ☁️ GitHub
-    participant Lab as 🖥️ Lab Computer
+    participant You as Your Laptop
+    participant GH as GitHub
+    participant Lab as Lab Computer
 
     Lab->>GH: git push (worked on HW at the lab)
     Note over You: Later, at home...
     You->>GH: git pull
     GH-->>You: Downloads the lab commits
-    Note over You: Now up to date ✅
+    Note over You: Now up to date 
     You->>You: edit, add, commit
     You->>GH: git push
 ```
@@ -242,7 +242,7 @@ sequenceDiagram
 
 ---
 
-## 🔁 Putting It All Together
+## Putting It All Together
 
 A typical work session:
 
@@ -258,7 +258,7 @@ git commit -m "Implement part 2"      # 4. snapshot
 git push                              # 5. upload
 ```
 
-Then check github.com to confirm. ✅
+Then check github.com to confirm. 
 
 ---
 
@@ -288,7 +288,7 @@ e4f5g6h Add input validation
 
 ---
 
-## 🔗 Related
+## Related
 
 - [What Are Git & GitHub?](01-what-is-git-and-github.md): the four places your code lives
 - [Fixing Common Problems](06-fixing-common-problems.md): push rejected, merge conflicts, undoing commits

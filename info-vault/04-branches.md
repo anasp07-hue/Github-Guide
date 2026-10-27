@@ -35,9 +35,9 @@ gitGraph
 
 **When do students actually need branches?**
 
-- 👥 **Group projects.** Each person works on their own branch so you don't overwrite each other.
-- 📝 **Your professor requires PRs.** Some courses grade or review work through Pull Requests, and a PR always comes from a branch.
-- 🧪 **Trying something risky.** Want to rewrite your whole solution? Do it on a branch so you can bail out.
+- **Group projects.** Each person works on their own branch so you don't overwrite each other.
+- **Your professor requires PRs.** Some courses grade or review work through Pull Requests, and a PR always comes from a branch.
+- **Trying something risky.** Want to rewrite your whole solution? Do it on a branch so you can bail out.
 
 **When can you skip them?** Solo homework where your professor just says "push to main." That's fine!
 
@@ -55,7 +55,7 @@ flowchart LR
     B --> C["edit → add → commit<br/><i>(repeat)</i>"]
     C --> D["git push -u origin<br/>feature-name"]
     D --> E["Open a Pull Request<br/>on GitHub"]
-    E --> F["Merge ✅"]
+    E --> F["Merge"]
     F --> G["git switch main<br/>git pull"]
 ```
 
@@ -125,7 +125,7 @@ git branch -d add-login
 <br>
 
 - `-d` only deletes the branch if it's been merged, so it's safe.
-- `-D` (capital) force-deletes it even if it isn't merged. ⚠️ You'll lose any commits that exist only on that branch.
+- `-D` (capital) force-deletes it even if it isn't merged. You'll lose any commits that exist only on that branch.
 - You can't delete the branch you're currently on. Switch to `main` first.
 - To delete it on GitHub too: `git push origin --delete add-login` (or click **Delete branch** after merging a PR).
 
@@ -137,7 +137,7 @@ git branch -d add-login
 
 Use short, lowercase names with dashes that describe the work:
 
-| ✅ Good | ❌ Avoid |
+| Good | Avoid |
 |---|---|
 | `add-login-page` | `branch1` |
 | `fix-sorting-bug` | `my stuff` (spaces don't work) |
@@ -145,7 +145,7 @@ Use short, lowercase names with dashes that describe the work:
 
 ---
 
-## ⚠️ Common Branch Gotchas
+## Common Branch Issues
 
 <details>
 <summary><b>▶ "I made changes on the wrong branch!"</b></summary>
@@ -215,7 +215,7 @@ Both do the same thing. `switch` is just clearer.
 
 ---
 
-## 🔗 Related
+## Related
 
 - [Pull Requests](05-pull-requests.md): how a branch gets merged back into main
 - [Fixing Common Problems](06-fixing-common-problems.md): merge conflicts between branches

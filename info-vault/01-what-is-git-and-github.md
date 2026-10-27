@@ -40,10 +40,10 @@ Your code moves through **four places**. Learn this diagram and the rest of Git 
 
 ```mermaid
 flowchart LR
-    WD["📁 Working Directory<br/><i>files you're editing</i>"]
-    SA["📋 Staging Area<br/><i>changes ready to save</i>"]
-    LR["💾 Local Repo<br/><i>saved snapshots<br/>on your computer</i>"]
-    RR["☁️ GitHub<br/><i>remote copy online</i>"]
+    WD["Working Directory<br/><i>files you're editing</i>"]
+    SA["Staging Area<br/><i>changes ready to save</i>"]
+    LR["Local Repo<br/><i>saved snapshots<br/>on your computer</i>"]
+    RR["GitHub<br/><i>remote copy online</i>"]
 
     WD -- "git add" --> SA
     SA -- "git commit" --> LR
@@ -98,15 +98,15 @@ flowchart LR
 
 ## Why Bother?
 
-- ✅ **It's how you submit.** Many CS courses grade whatever is on GitHub at the deadline.
-- ✅ **Undo button for your whole project.** Broke everything at 2 AM? Go back to a commit that worked.
-- ✅ **Backup.** Laptop dies → your code is still on GitHub.
-- ✅ **Teamwork.** Multiple people can work on the same project without emailing zip files.
-- ✅ **Résumé.** Employers look at GitHub profiles.
+- **It's how you submit.** Many CS courses grade whatever is on GitHub at the deadline.
+- **Undo button for your whole project.** Broke everything at 2 AM? Go back to a commit that worked.
+- **Backup.** Laptop dies → your code is still on GitHub.
+- **Teamwork.** Multiple people can work on the same project without emailing zip files.
+- **Resume.** Employers look at GitHub profiles.
 
 ---
 
-## 🔗 Related
+## Related
 
 - [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md): puts the big-picture diagram into practice
 - [Branches](04-branches.md): what a branch actually looks like

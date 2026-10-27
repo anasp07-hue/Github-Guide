@@ -15,9 +15,9 @@
 The name is confusing. You're asking the project to **pull your changes in**. Think of it as a **"merge request"** (which is literally what GitLab calls it).
 
 PRs give your team (or TA) a place to:
-- 👀 See exactly what changed, line by line
-- 💬 Leave comments and suggestions
-- ✅ Approve the changes before they hit `main`
+- See exactly what changed, line by line
+- Leave comments and suggestions
+- Approve the changes before they hit `main`
 
 ---
 
@@ -26,9 +26,9 @@ PRs give your team (or TA) a place to:
 ```mermaid
 sequenceDiagram
     actor You
-    participant Local as 💻 Your Computer
-    participant GH as ☁️ GitHub
-    actor Reviewer as 👤 Teammate / TA
+    participant Local as Your Computer
+    participant GH as GitHub
+    actor Reviewer as Teammate / TA
 
     You->>Local: git switch -c add-search
     You->>Local: edit, add, commit
@@ -38,7 +38,7 @@ sequenceDiagram
     Reviewer->>GH: Comments / requests changes
     You->>Local: Fix things, commit
     Local->>GH: git push (PR updates automatically)
-    Reviewer->>GH: Approve ✅
+    Reviewer->>GH: Approve 
     You->>GH: Click "Merge pull request"
     GH-->>Local: git switch main && git pull
 ```
@@ -128,9 +128,9 @@ git push
 1. Open the PR → **Files changed** tab
 2. Hover over a line → click the blue **+** to comment on it
 3. When finished, click **Review changes** (top right) and pick one:
-   - 💬 **Comment**: general feedback
-   - ✅ **Approve**: looks good to merge
-   - 🔴 **Request changes**: needs fixes first
+   - **Comment**: general feedback
+   - **Approve**: looks good to merge
+   - **Request changes**: needs fixes first
 
 Be kind and specific: *"This loop might skip the last item. Should it be `<=`?"* beats *"this is wrong."*
 
@@ -171,7 +171,7 @@ git branch -d add-search    # clean up the local branch
 
 ---
 
-## 🧑‍🤝‍🧑 Group Project Workflow
+## Group Project Workflow
 
 ```mermaid
 gitGraph
@@ -192,11 +192,11 @@ gitGraph
 
 **Team rules that save friendships:**
 
-1. 🚫 **Nobody pushes directly to `main`.** Everything goes through a PR.
-2. 🔄 **`git pull` on `main` before starting a new branch.**
-3. 🧩 **Split work by file or feature** so you're not all editing the same lines.
-4. ⏱️ **Keep PRs small** and merge them often. A huge PR on the last night is a recipe for conflicts.
-5. 👀 **Someone else reviews** before merging.
+1. **Nobody pushes directly to `main`.** Everything goes through a PR.
+2. **`git pull` on `main` before starting a new branch.**
+3. **Split work by file or feature** so you're not all editing the same lines.
+4. **Keep PRs small** and merge them often. A huge PR on the last night is a recipe for conflicts.
+5. **Someone else reviews** before merging.
 
 <details>
 <summary><b>▶ Press for more detail: adding teammates to a repo</b></summary>
@@ -217,7 +217,7 @@ With GitHub Classroom group assignments, the first teammate creates the team and
 
 ---
 
-## 🔗 Related
+## Related
 
 - [Branches](04-branches.md): every PR starts from a branch
 - [Fixing Common Problems](06-fixing-common-problems.md): resolving conflicts in a PR

@@ -1,4 +1,4 @@
-# 📖 Table of Contents
+# Table of Contents
 
 **Intro to Git & GitHub for CS Students:** the parts you actually need to get starter code, save your work, and turn it in.
 
@@ -7,7 +7,7 @@
 
 ---
 
-## 🟢 Part 1: The Basics
+## Part 1: The Basics
 
 | # | Page | Sections | Time |
 |---|------|----------|------|
@@ -15,14 +15,14 @@
 | 2 | [One-Time Setup](02-setup.md) | Create an Account · Install Git · Set Your Name & Email · Sign In So You Can Push | 10 min |
 | 3 | [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md) | `clone` · `status` · `add` · `commit` · `push` · `pull` · Putting It All Together · See Your History | 10 min |
 
-## 🔵 Part 2: Working With Others
+## Part 2: Working With Others
 
 | # | Page | Sections | Time |
 |---|------|----------|------|
 | 4 | [Branches](04-branches.md) | What Is a Branch? · The Branch Workflow · Commands · Naming Branches · Common Gotchas | 8 min |
 | 5 | [Pull Requests (PRs)](05-pull-requests.md) | Why "Pull" Request? · The PR Lifecycle · Step by Step · Group Project Workflow | 8 min |
 
-## 🟠 Part 3: Help & Reference
+## Part 3: Help & Reference
 
 | # | Page | Sections | Time |
 |---|------|----------|------|
@@ -31,14 +31,14 @@
 
 ---
 
-## 🗺️ Which Pages Should I Read?
+## Which Pages Should I Read?
 
 ```mermaid
 flowchart LR
     A["1. What is Git?"] --> B["2. Setup"]
     B --> C["3. Clone, Commit,<br/>Pull, Push"]
     C --> D{"Working with<br/>a team?"}
-    D -- "No, just<br/>solo homework" --> F["⭐ Cheatsheet"]
+    D -- "No, just<br/>solo homework" --> F["Cheatsheet"]
     D -- "Yes, or my prof<br/>wants branches/PRs" --> E["4. Branches"]
     E --> G["5. Pull Requests"]
     G --> F
@@ -48,7 +48,7 @@ flowchart LR
 
 ---
 
-## ⚡ In a Hurry? The 5 Commands You Need
+## In a Hurry? The 5 Commands You Need
 
 ```bash
 git clone <repo-url>      # once: download the assignment
@@ -74,6 +74,6 @@ Full explanation: [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md)
 
 ---
 
-## 🚫 Not Covered (On Purpose)
+## Not Covered (On Purpose)
 
 GitHub Actions, CI/CD, GitHub Packages/GHCR, rebasing, submodules, and Git internals. You don't need them for coursework.

@@ -15,10 +15,10 @@
 
 ```mermaid
 flowchart TD
-    A["1️⃣ Create a GitHub account"] --> B["2️⃣ Install Git"]
-    B --> C["3️⃣ Set your name & email"]
-    C --> D["4️⃣ Sign in to GitHub<br/>from the terminal"]
-    D --> E["✅ Ready to clone & push!"]
+    A["Create a GitHub account"] --> B["Install Git"]
+    B --> C["Set your name & email"]
+    C --> D["Sign in to GitHub<br/>from the terminal"]
+    D --> E["Ready to clone & push!"]
 ```
 
 ---
@@ -112,7 +112,7 @@ git config --global init.defaultBranch main   # new repos use "main" instead of 
 > [!WARNING]
 > GitHub **does not accept your account password** in the terminal. If you type it in when pushing, it will fail. Pick **one** of the options below.
 
-### ✅ Easiest Option: GitHub CLI
+### Easiest Option: GitHub CLI
 
 1. Install the GitHub CLI from [cli.github.com](https://cli.github.com) (Mac: `brew install gh`)
 2. Run:
@@ -143,7 +143,7 @@ More setup up front, but you never have to type anything again afterward. Follow
 
 ---
 
-## ✅ Setup Done?
+## Setup Done?
 
 Run through this quickly:
 
@@ -154,7 +154,7 @@ Run through this quickly:
 
 ---
 
-## 🔗 Related
+## Related
 
 - [What Are Git & GitHub?](01-what-is-git-and-github.md): why you're installing all this
 - [Fixing Common Problems](06-fixing-common-problems.md): if signing in or pushing fails

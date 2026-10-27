@@ -10,22 +10,22 @@
 
 ---
 
-## 🧭 Which Problem Do You Have?
+## Which Problem Do You Have?
 
 ```mermaid
 flowchart TD
-    S["😱 Something went wrong"] --> Q1{"What happened?"}
-    Q1 -- "push was rejected" --> P1["⬇️ Push Rejected"]
-    Q1 -- "CONFLICT in file" --> P2["⬇️ Merge Conflicts"]
-    Q1 -- "password doesn't work" --> P3["⬇️ Authentication Failed"]
-    Q1 -- "I want to undo something" --> P4["⬇️ Undoing Things"]
-    Q1 -- "not a git repository" --> P5["⬇️ Not a Git Repository"]
-    Q1 -- "stuck in a weird editor" --> P6["⬇️ Stuck in Vim"]
+    S["Something went wrong"] --> Q1{"What happened?"}
+    Q1 -- "push was rejected" --> P1["Push Rejected"]
+    Q1 -- "CONFLICT in file" --> P2["Merge Conflicts"]
+    Q1 -- "password doesn't work" --> P3["Authentication Failed"]
+    Q1 -- "I want to undo something" --> P4["Undoing Things"]
+    Q1 -- "not a git repository" --> P5["Not a Git Repository"]
+    Q1 -- "stuck in a weird editor" --> P6["Stuck in Vim"]
 ```
 
 ---
 
-## ⛔ Push Rejected
+## Push Rejected
 
 ```text
 ! [rejected]        main -> main (fetch first)
@@ -49,16 +49,16 @@ git push
 
 ```mermaid
 sequenceDiagram
-    participant You as 💻 You
-    participant GH as ☁️ GitHub
-    participant Mate as 👤 Teammate
+    participant You as You
+    participant GH as GitHub
+    participant Mate as Teammate
 
     Mate->>GH: push (commit B)
     You->>You: commit C (you don't have B)
-    You->>GH: push ❌ rejected
+    You->>GH: push rejected
     You->>GH: git pull
     GH-->>You: brings B, merges with C
-    You->>GH: push ✅
+    You->>GH: push 
 ```
 
 - If `git pull` says **CONFLICT**, see [Merge Conflicts](#-merge-conflicts) below.
@@ -67,13 +67,13 @@ sequenceDiagram
   ```bash
   git config --global pull.rebase false
   ```
-- ⚠️ **Never use `git push --force`** on a shared branch to "fix" this. It deletes other people's work on GitHub.
+- **Never use `git push --force`** on a shared branch to "fix" this. It deletes other people's work on GitHub.
 
 </details>
 
 ---
 
-## 💥 Merge Conflicts
+## Merge Conflicts
 
 ```text
 CONFLICT (content): Merge conflict in main.py
@@ -146,7 +146,7 @@ git push                  # the PR updates and is now mergeable
 
 ---
 
-## 🔑 Authentication Failed
+## Authentication Failed
 
 ```text
 remote: Support for password authentication was removed on August 13, 2021.
@@ -176,26 +176,26 @@ See [Setup → Step 4](02-setup.md#step-4-sign-in-so-you-can-push) for other opt
 
 ---
 
-## ↩️ Undoing Things
+## Undoing Things
 
 Find your situation:
 
 | I want to… | Command | Safe? |
 |---|---|---|
-| Throw away changes to a file (not committed yet) | `git restore file.py` | ⚠️ Changes are gone for good |
-| Unstage a file (undo `git add`) | `git restore --staged file.py` | ✅ File keeps your edits |
-| Fix the message of my last commit (**not pushed yet**) | `git commit --amend -m "Better message"` | ✅ |
-| Add a forgotten file to my last commit (**not pushed yet**) | `git add file.py` then `git commit --amend --no-edit` | ✅ |
-| Undo my last commit but **keep the changes** (**not pushed yet**) | `git reset --soft HEAD~1` | ✅ |
-| Undo a commit that's **already pushed** | `git revert <commit-id>` | ✅ Makes a new "undo" commit |
-| Temporarily set changes aside | `git stash` / `git stash pop` | ✅ |
+| Throw away changes to a file (not committed yet) | `git restore file.py` | Changes are gone for good |
+| Unstage a file (undo `git add`) | `git restore --staged file.py` | File keeps your edits |
+| Fix the message of my last commit (**not pushed yet**) | `git commit --amend -m "Better message"` | 
+| Add a forgotten file to my last commit (**not pushed yet**) | `git add file.py` then `git commit --amend --no-edit` | 
+| Undo my last commit but **keep the changes** (**not pushed yet**) | `git reset --soft HEAD~1` | 
+| Undo a commit that's **already pushed** | `git revert <commit-id>` | Makes a new "undo" commit |
+| Temporarily set changes aside | `git stash` / `git stash pop` | 
 
 <details>
 <summary><b>▶ Press for more detail</b></summary>
 
 <br>
 
-**The golden rule:** 🚨 **If you already pushed it, don't rewrite it.** Use `git revert` instead of `reset` or `--amend`. Rewriting pushed history causes problems for everyone else (and can mess up your submission history).
+**The golden rule:**  **If you already pushed it, don't rewrite it.** Use `git revert` instead of `reset` or `--amend`. Rewriting pushed history causes problems for everyone else (and can mess up your submission history).
 
 **Finding a commit ID** for `git revert`:
 ```bash
@@ -221,7 +221,7 @@ git restore --source=e4f5g6h main.py
 
 ---
 
-## 📂 Not a Git Repository
+## Not a Git Repository
 
 ```text
 fatal: not a git repository (or any of the parent directories): .git
@@ -250,7 +250,7 @@ In VS Code: **File → Open Folder** and pick the folder that contains the hidde
 
 ---
 
-## 📝 Stuck in Vim
+## Stuck in Vim
 
 You ran `git commit` or `git pull` and now your terminal shows a weird full-screen editor with `~` on every line.
 
@@ -281,7 +281,7 @@ That saves and quits. (`:q!` quits **without** saving, which cancels the commit.
 
 ---
 
-## 🔐 I Committed a Password or API Key
+## I Committed a Password or API Key
 
 **Fix:**
 1. **Change the password or revoke the key immediately.** Assume it's been seen.
@@ -303,7 +303,7 @@ Completely scrubbing it from history is an advanced topic. Ask your TA or instru
 
 ---
 
-## 🆘 Still Stuck?
+## Still Stuck?
 
 1. Run `git status` and **read it slowly**.
 2. Copy the **exact** error message into a search engine.
@@ -312,7 +312,7 @@ Completely scrubbing it from history is an advanced topic. Ask your TA or instru
 
 ---
 
-## 🔗 Related
+## Related
 
 - [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md): the normal workflow, to avoid most of these
 - [Pull Requests](05-pull-requests.md): where conflicts usually show up
