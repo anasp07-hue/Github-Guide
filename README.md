@@ -5,11 +5,11 @@
 A short, skimmable beginner's guide to Git and GitHub: cloning, committing, pulling, pushing, branches, and pull requests. It includes diagrams, a cheatsheet, and "press for more detail" dropdowns so you can skim first and dig in only when you need to.
 
 > [!IMPORTANT]
-> **👋 Start here.** Read this page first, then follow the pages below in order. Need a command fast? Go straight to the ⭐ Cheatsheet.
+> ** Start here.** Read this page first, then follow the pages below in order. Need a command fast? Go straight to the Cheatsheet.
 
 ---
 
-## 📚 Contents
+## Contents
 
 | # | Page | What you'll learn | Time |
 |---|------|-------------------|------|
@@ -21,11 +21,11 @@ A short, skimmable beginner's guide to Git and GitHub: cloning, committing, pull
 | 6 | [Fixing Common Problems](info-vault/06-fixing-common-problems.md) | "Push rejected", merge conflicts, and other panics | 10 min |
 | ⭐ | [**Cheatsheet**](info-vault/cheatsheet.md) | Every command on one page. Bookmark it! | n/a |
 
-📖 Want the section-by-section breakdown and a "which pages should I read?" diagram? See the full **[Table of Contents](info-vault/00-Table%20of%20Contents.md)**.
+ Want the section-by-section breakdown and a "which pages should I read?" diagram? See the full **[Table of Contents](info-vault/00-Table%20of%20Contents.md)**.
 
 ---
 
-## 📥 Get a Copy
+## Get a Copy
 
 You can read the guide right here on GitHub. To keep your own copy, clone it:
 
@@ -45,8 +45,8 @@ The guide is plain Markdown (`.md`) files, so **any text editor works**. To see 
 
 | | App | How to open the guide |
 |---|---|---|
-| ⭐ **Recommended** | **Obsidian** | **Open folder as vault** → select the cloned folder. Start from **Table of Contents**, and open **Graph view** to see how the pages connect. |
-| ✅ Works great | **VS Code** | **File → Open Folder** → select the cloned folder, open any `.md` file, then press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) for the preview. |
+| **Recommended** | **Obsidian** | **Open folder as vault** → select the cloned folder. Start from **Table of Contents**, and open **Graph view** to see how the pages connect. |
+| Works great | **VS Code** | **File → Open Folder** → select the cloned folder, open any `.md` file, then press `Cmd+Shift+V` (Mac) or `Ctrl+Shift+V` (Windows/Linux) for the preview. |
 
 <details>
 <summary><b>▶ Press for more detail: why Obsidian?</b></summary>
@@ -70,7 +70,7 @@ VS Code's built-in preview doesn't draw Mermaid diagrams. Install the **Markdown
 
 </details>
 
-### 🔗 Quick Setup Links
+### Quick Setup Links
 
 **Obsidian**
 - [Download Obsidian](https://obsidian.md/download) (free)
@@ -83,7 +83,7 @@ VS Code's built-in preview doesn't draw Mermaid diagrams. Install the **Markdown
 
 ---
 
-## 📁 What's Inside
+## What's Inside
 
 ```text
 .
