@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Obsidian: per-user window layout, changes every time the vault is opened
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
