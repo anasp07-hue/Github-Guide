@@ -16,6 +16,7 @@ A short, skimmable beginner's guide to Git and GitHub: cloning, committing, pull
 | Set up Git on my computer (first time) | [One-Time Setup](info-vault/02-setup.md) |
 | Get the starter code for an assignment | [Clone, Commit, Pull, Push → Step 1](info-vault/03-clone-commit-pull-push.md#step-1-get-the-repo-git-clone) |
 | Upload / turn in my work | [Clone, Commit, Pull, Push → Step 5](info-vault/03-clone-commit-pull-push.md#step-5-upload-to-github-git-push) |
+| Submit through a branch / pull request | [Branches](info-vault/04-branches.md), then [Pull Requests → Step by Step](info-vault/05-pull-requests.md#step-by-step) |
 | Work on a group project | [Branches](info-vault/04-branches.md), then [Group Project Workflow](info-vault/05-pull-requests.md#group-project-workflow) |
 | Fix an error I'm getting | [Fixing Common Problems](info-vault/06-fixing-common-problems.md) |
 | Undo something | [Undoing Things](info-vault/06-fixing-common-problems.md#undoing-things) |
