@@ -74,7 +74,7 @@ git push
 | Command | What it does |
 |---|---|
 | `git pull` | Download and merge new changes |
-| `git push` | Upload your commits (**this is how you submit**) |
+| `git push` | Upload your commits to GitHub (**usually how you submit**) |
 | `git push -u origin <branch>` | Push a new branch for the first time |
 
 ---

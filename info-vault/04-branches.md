@@ -4,7 +4,7 @@
 
 > [!NOTE]
 > **TL;DR**
-> - A **branch** is a separate copy of your work where you can make changes without touching `main`.
+> - A **branch** is a separate line of work where you can make changes without touching `main`.
 > - Make one: `git switch -c my-branch`
 > - Push it: `git push -u origin my-branch`
 > - When it's done, merge it back with a [Pull Request](05-pull-requests.md).

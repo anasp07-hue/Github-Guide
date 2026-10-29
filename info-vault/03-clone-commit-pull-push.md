@@ -12,7 +12,7 @@
 > # edit your code
 > git add .
 > git commit -m "What I did"
-> git push                   # ← this is how you submit
+> git push                   # ← uploads to GitHub (usually how you submit)
 > ```
 
 ---
@@ -188,6 +188,8 @@ git push
 
 > [!IMPORTANT]
 > **Committing ≠ submitting.** Commits stay on your laptop until you `push`. After pushing, **refresh your repo on github.com** and make sure your changes are there.
+>
+> Pushing gets your work onto GitHub. For most GitHub assignments, that counts as submitting, but **check your syllabus**: some professors also want a Pull Request or a link turned in on Canvas (or wherever your class posts assignments).
 
 <details>
 <summary><b>▶ Press for more detail</b></summary>
@@ -196,7 +198,7 @@ git push
 
 - The full form is `git push origin main` ("push to GitHub, on the main branch"). Plain `git push` does the same thing when you cloned the repo.
 - **Asked for a password and it fails?** GitHub doesn't accept account passwords here. See [Setup → Step 4](02-setup.md#step-4-sign-in-so-you-can-push).
-- **"rejected… fetch first"?** Someone (or you, from another computer, or your professor) pushed changes you don't have. Run `git pull` and then `git push` again. More in [Fixing Common Problems](06-fixing-common-problems.md#-push-rejected).
+- **"rejected… fetch first"?** Someone (or you, from another computer, or your professor) pushed changes you don't have. Run `git pull` and then `git push` again. More in [Fixing Common Problems](06-fixing-common-problems.md#push-rejected).
 - **Deadline tip:** Most GitHub Classroom assignments grade whatever is pushed at the deadline. Push early, push often. Late pushes may be ignored.
 
 </details>

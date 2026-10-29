@@ -155,7 +155,7 @@ The dropdown next to the merge button offers:
 
 If your class or team doesn't specify, use the default.
 
-**"This branch has conflicts that must be resolved"?** See [Merge Conflicts](06-fixing-common-problems.md#-merge-conflicts).
+**"This branch has conflicts that must be resolved"?** See [Merge Conflicts](06-fixing-common-problems.md#merge-conflicts).
 
 </details>
 
@@ -177,6 +177,7 @@ git branch -d add-search    # clean up the local branch
 gitGraph
     commit id: "starter"
     branch alice-login
+    checkout main
     branch bob-database
     checkout alice-login
     commit id: "login form"

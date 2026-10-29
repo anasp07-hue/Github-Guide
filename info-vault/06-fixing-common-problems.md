@@ -55,14 +55,15 @@ sequenceDiagram
 
     Mate->>GH: push (commit B)
     You->>You: commit C (you don't have B)
-    You->>GH: push rejected
+    You->>GH: git push
+    GH--xYou: rejected (you don't have B)
     You->>GH: git pull
     GH-->>You: brings B, merges with C
     You->>GH: push 
 ```
 
-- If `git pull` says **CONFLICT**, see [Merge Conflicts](#-merge-conflicts) below.
-- If `git pull` opens an editor asking for a merge message, just save and close it (see [Stuck in Vim](#-stuck-in-vim)).
+- If `git pull` says **CONFLICT**, see [Merge Conflicts](#merge-conflicts) below.
+- If `git pull` opens an editor asking for a merge message, just save and close it (see [Stuck in Vim](#stuck-in-vim)).
 - If `git pull` complains about **"divergent branches"**, run this once and then pull again:
   ```bash
   git config --global pull.rebase false
@@ -115,7 +116,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 | Marker | Meaning |
 |---|---|
-| `<<<<<<< HEAD` | Start of **your** version |
+| `<<<<<<< HEAD` | Start of **your** version (`HEAD` = what you have right now) |
 | `=======` | Divider |
 | `>>>>>>> branch-name` | End of **their** version |
 
@@ -182,13 +183,13 @@ Find your situation:
 
 | I want to… | Command | Safe? |
 |---|---|---|
-| Throw away changes to a file (not committed yet) | `git restore file.py` | Changes are gone for good |
-| Unstage a file (undo `git add`) | `git restore --staged file.py` | File keeps your edits |
-| Fix the message of my last commit (**not pushed yet**) | `git commit --amend -m "Better message"` | 
-| Add a forgotten file to my last commit (**not pushed yet**) | `git add file.py` then `git commit --amend --no-edit` | 
-| Undo my last commit but **keep the changes** (**not pushed yet**) | `git reset --soft HEAD~1` | 
-| Undo a commit that's **already pushed** | `git revert <commit-id>` | Makes a new "undo" commit |
-| Temporarily set changes aside | `git stash` / `git stash pop` | 
+| Throw away changes to a file (not committed yet) | `git restore file.py` | **No.** Changes are gone for good |
+| Unstage a file (undo `git add`) | `git restore --staged file.py` | Yes. File keeps your edits |
+| Fix the message of my last commit (**not pushed yet**) | `git commit --amend -m "Better message"` | Yes, if not pushed |
+| Add a forgotten file to my last commit (**not pushed yet**) | `git add file.py` then `git commit --amend --no-edit` | Yes, if not pushed |
+| Undo my last commit but **keep the changes** (**not pushed yet**) | `git reset --soft HEAD~1` | Yes, if not pushed. Your edits stay in your files |
+| Undo a commit that's **already pushed** | `git revert <commit-id>` | Yes. Makes a new "undo" commit |
+| Temporarily set changes aside | `git stash` / `git stash pop` | Yes. `pop` brings them back |
 
 <details>
 <summary><b>▶ Press for more detail</b></summary>
@@ -215,7 +216,7 @@ git show e4f5g6h:main.py
 git restore --source=e4f5g6h main.py
 ```
 
-**"I really messed up and want to see everything I've done":** `git reflog` shows a history of everything HEAD has pointed to, even "lost" commits. It's a lifesaver, but ask a TA for help if you get here.
+**"I really messed up and want to see everything I've done":** `git reflog` lists every commit you've recently been on, even ones that seem "lost." It's a lifesaver, but ask a TA for help if you get here.
 
 </details>
 
