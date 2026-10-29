@@ -19,7 +19,7 @@
 
 | # | Page | Sections | Time |
 |---|------|----------|------|
-| 4 | [Branches](04-branches.md) | What Is a Branch? · The Branch Workflow · Commands · Naming Branches · Common Gotchas | 8 min |
+| 4 | [Branches](04-branches.md) | What Is a Branch? · The Branch Workflow · Commands · Naming Branches · Common Branch Issues | 8 min |
 | 5 | [Pull Requests (PRs)](05-pull-requests.md) | Why "Pull" Request? · The PR Lifecycle · Step by Step · Group Project Workflow | 8 min |
 
 ## Part 3: Help & Reference
@@ -55,7 +55,7 @@ git clone <repo-url>      # once: download the assignment
 git pull                  # before you start working: get the latest version
 git add .                 # stage your changes
 git commit -m "message"   # save a snapshot
-git push                  # upload to GitHub (this is how you "submit")
+git push                  # upload to GitHub (usually how you "submit")
 ```
 
 <details>
@@ -65,7 +65,7 @@ git push                  # upload to GitHub (this is how you "submit")
 
 - `clone` only happens **once** per assignment. After that you just `cd` into the folder.
 - `pull` → `add` → `commit` → `push` is the loop you repeat every time you work.
-- Your work is **not submitted** until you `push`. Committing only saves it on *your* computer.
+- Your work is **not on GitHub** until you `push`. Committing only saves it on *your* computer.
 - Always double-check by opening your repo on github.com and making sure your latest changes are there.
 
 Full explanation: [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md)
