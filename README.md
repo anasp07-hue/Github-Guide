@@ -113,3 +113,9 @@ VS Code's built-in preview doesn't draw Mermaid diagrams. Install the **Markdown
     ├── 06-fixing-common-problems.md
     └── cheatsheet.md
 ```
+
+---
+
+## Feedback Survey
+
+Did this guide help? Was anything confusing or missing? **[Take the short feedback survey](https://docs.google.com/forms/d/1f28n-w30GcmhGHxYQsfx9zHnnOcoIU3eIiUD0Zl01bA/viewform)**. Your answers help make the guide better for the next student.
