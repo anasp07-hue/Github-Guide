@@ -83,6 +83,8 @@ flowchart LR
 | **Merge** | Combine changes from one branch into another |
 | **Pull Request (PR)** | A request on GitHub to merge your branch, where others can review it first |
 | **Merge conflict** | When Git can't automatically combine two changes to the same lines |
+| **Fork** | Your own copy of someone else's repo on GitHub, used when you can't push to the original ([more](05-pull-requests.md#forks-contributing-to-someone-elses-repo)) |
+| **Upstream** | The original repo you forked from |
 
 <details>
 <summary><b>▶ Press for more detail: <code>origin</code> and <code>main</code></b></summary>

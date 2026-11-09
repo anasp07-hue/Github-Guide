@@ -7,6 +7,7 @@
 > - A **Pull Request** says: *"Here are the changes on my branch. Please review them and merge them into `main`."*
 > - It happens **on the GitHub website**, not in the terminal.
 > - Flow: **push branch → open PR → get review → merge → pull `main`**.
+> - Can't push to the repo? **Fork** it first. See [Forks](#forks-contributing-to-someone-elses-repo).
 
 ---
 
@@ -213,6 +214,89 @@ If you created the repo yourself (not via GitHub Classroom):
 With GitHub Classroom group assignments, the first teammate creates the team and the others join it when accepting the assignment link. Access is set up automatically.
 
 **Optional:** To *force* PRs for everyone, go to **Settings → Branches → Add branch protection rule** for `main` and check **Require a pull request before merging**. (Private repos on free personal accounts may not support this. Classroom/org repos often do.)
+
+</details>
+
+---
+
+## Forks: Contributing to Someone Else's Repo
+
+Everything above assumes you can **push** to the repo. Sometimes you can't, like with an open-source project, a class-wide repo, or a classmate's project you weren't added to. In that case you **fork** it: GitHub makes **your own copy** of the repo under your account, you push there, and then you open a PR back to the original.
+
+**Fork or branch?**
+
+| Can you push to the repo? | Do this |
+|---|---|
+| **Yes**: it's yours, it's from GitHub Classroom, or you were added as a collaborator | **Branch** ([Branches](04-branches.md) + the steps above) |
+| **No**: open source, a professor's or class-wide public repo, someone else's project | **Fork**, then branch inside your fork |
+
+> [!NOTE]
+> **GitHub Classroom assignments never need a fork.** Clicking **Accept** already creates your own copy of the repo.
+
+```mermaid
+flowchart LR
+    U["Original repo<br/><i>(upstream)</i>"] -- "1. Fork" --> F["Your fork on GitHub<br/><i>(origin)</i>"]
+    F -- "2. git clone" --> L["Your computer"]
+    L -- "3. git push" --> F
+    F -- "4. Pull Request" --> U
+```
+
+### Step by step
+
+1. On the original repo's GitHub page, click **Fork** (top right) → **Create fork**.
+2. Clone **your fork**, not the original. The URL should have *your* username in it:
+   ```bash
+   git clone https://github.com/your-username/cool-project.git
+   cd cool-project
+   ```
+3. Branch, commit, and push like normal. `origin` is your fork, so this is allowed:
+   ```bash
+   git switch -c fix-typo
+   # ...make changes, add, commit...
+   git push -u origin fix-typo
+   ```
+4. Go to your fork on GitHub and click **Compare & pull request**. Check the top of the page:
+   - **base repository:** `original-owner/cool-project`, **base:** `main` ← where it's going
+   - **head repository:** `your-username/cool-project`, **compare:** `fix-typo` ← where it's coming from
+5. Write a description and click **Create pull request**. The repo's maintainers review and merge it, since you can't merge it yourself.
+
+<details>
+<summary><b>▶ Press for more detail: keeping your fork up to date</b></summary>
+
+<br>
+
+Your fork **doesn't update itself** when the original repo changes. Before starting new work:
+
+**Easy way (website):** On your fork's GitHub page, click **Sync fork** → **Update branch**. Then on your computer:
+
+```bash
+git switch main
+git pull
+```
+
+**Terminal way:** Tell Git about the original repo once, then pull from it whenever you need to:
+
+```bash
+git remote add upstream https://github.com/original-owner/cool-project.git   # once
+git switch main
+git pull upstream main     # get the original's latest changes
+git push                   # update your fork on GitHub too
+```
+
+`upstream` is just a nickname for the original repo, the same way `origin` is the nickname for your fork.
+
+</details>
+
+<details>
+<summary><b>▶ Press for more detail: fork with the GitHub CLI</b></summary>
+
+<br>
+
+If you set up the GitHub CLI in [Setup → Step 4](02-setup.md#step-4-sign-in-so-you-can-push), one command forks **and** clones, and it also sets up `upstream` for you:
+
+```bash
+gh repo fork original-owner/cool-project --clone
+```
 
 </details>
 
