@@ -8,6 +8,23 @@
 > 2. Install Git
 > 3. Tell Git your name and email
 > 4. Sign in so you can push
+>
+> Already used Git before? Check what's done in [Already Set Up?](#already-set-up) and skip ahead.
+
+---
+
+## Already Set Up?
+
+Used Git or GitHub before, maybe in another class or on an old laptop? Run these checks first and **skip any step that's already done**.
+
+| Check | Run this | Already good if… |
+|---|---|---|
+| Git is installed | `git --version` | It prints a version number → skip [Step 2](#step-2-install-git). If it's **older than 2.28**, update Git anyway (some commands in this guide need it). |
+| Git knows who you are | `git config --global --list` | It shows your `user.name` and `user.email` → skip [Step 3](#step-3-tell-git-who-you-are). Make sure the email **matches your GitHub account**. |
+| You're signed in | `gh auth status` | It says `✓ Logged in to github.com account <your-username>` → skip [Step 4](#step-4-sign-in-so-you-can-push). Wrong username? See [Signed in with the wrong account?](#step-4-sign-in-so-you-can-push) below. |
+
+> [!TIP]
+> `gh: command not found` just means the GitHub CLI isn't installed yet. That's normal. Do Step 4.
 
 ---
 
@@ -38,6 +55,7 @@ Go to [github.com](https://github.com) and sign up.
 - **Students get free perks.** Apply for the [GitHub Student Developer Pack](https://education.github.com/pack) with your school email.
 - **Add your school email** to your GitHub account (Settings → Emails) so GitHub Classroom can match you to your class roster.
 - **Turn on two-factor authentication (2FA).** GitHub requires it for most accounts now.
+- **Already have an account?** Don't make a new one. Just sign in, add your school email (above), and turn on 2FA if it isn't on yet. Want a more professional username? Change it under **Settings → Account → Change username**. Your old repo links will redirect, but update anything you've shared.
 
 </details>
 
@@ -120,7 +138,49 @@ git config --global init.defaultBranch main   # new repos use "main" instead of 
    gh auth login
    ```
 3. Choose: **GitHub.com** → **HTTPS** → **Yes** (authenticate Git) → **Login with a web browser**
-4. Copy the code it shows you, paste it into the browser, and you're done.
+4. Copy the code it shows you, paste it into the browser, and click **Authorize**.
+
+**✅ What success looks like.** Your terminal should end up looking roughly like this (the exact wording can change a little between versions):
+
+```text
+$ gh auth login
+? Where do you use GitHub? GitHub.com
+? What is your preferred protocol for Git operations on this host? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: ABCD-1234
+Press Enter to open https://github.com/login/device in your browser...
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as your-username
+```
+
+The line that matters is **`✓ Logged in as your-username`**. Double-check any time with:
+
+```bash
+gh auth status
+# github.com
+#   ✓ Logged in to github.com account your-username (keyring)
+#   - Git operations protocol: https
+```
+
+<details>
+<summary><b>▶ Press for more detail: signed in with the wrong (or an old) account?</b></summary>
+
+<br>
+
+If `gh auth status` shows a different username than the one your class uses (e.g. an old personal account instead of your school one):
+
+```bash
+gh auth logout
+gh auth login     # sign in again, this time with the right account
+```
+
+If `git push` *still* uses the old account, your computer has an old password saved. See [Authentication Failed](06-fixing-common-problems.md#authentication-failed) for how to clear it on Mac and Windows.
+
+</details>
 
 <details>
 <summary><b>▶ Press for more detail: other ways to sign in</b></summary>
@@ -150,7 +210,7 @@ Run through this quickly:
 - [ ] I can log in to github.com
 - [ ] `git --version` prints a version number
 - [ ] `git config --global user.name` prints my name
-- [ ] I signed in with `gh auth login` (or one of the other options)
+- [ ] `gh auth status` shows ✓ Logged in with **my** username (or I set up one of the other sign-in options)
 
 ---
 
