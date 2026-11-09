@@ -6,6 +6,8 @@ A short, skimmable beginner's guide to Git and GitHub: cloning, committing, pull
 
 > [!IMPORTANT]
 > **Start here.** New to Git? Follow the pages below in order. Trying to get one thing done? Use the table right below. Need a command fast? Go straight to the [Cheatsheet](info-vault/cheatsheet.md).
+>
+> Feeling overwhelmed? Read just the **TL;DR** box at the top of each page first. Open the dropdowns later, only when you need them.
 
 ---
 
@@ -14,10 +16,12 @@ A short, skimmable beginner's guide to Git and GitHub: cloning, committing, pull
 | I need to… | Go here |
 |---|---|
 | Set up Git on my computer (first time) | [One-Time Setup](info-vault/02-setup.md) |
+| Check if I'm already set up (used Git before) | [Setup → Already Set Up?](info-vault/02-setup.md#already-set-up) |
 | Get the starter code for an assignment | [Clone, Commit, Pull, Push → Step 1](info-vault/03-clone-commit-pull-push.md#step-1-get-the-repo-git-clone) |
 | Upload / turn in my work | [Clone, Commit, Pull, Push → Step 5](info-vault/03-clone-commit-pull-push.md#step-5-upload-to-github-git-push) |
 | Submit through a branch / pull request | [Branches](info-vault/04-branches.md), then [Pull Requests → Step by Step](info-vault/05-pull-requests.md#step-by-step) |
 | Work on a group project | [Branches](info-vault/04-branches.md), then [Group Project Workflow](info-vault/05-pull-requests.md#group-project-workflow) |
+| Contribute to a repo I can't push to (fork it) | [Pull Requests → Forks](info-vault/05-pull-requests.md#forks-contributing-to-someone-elses-repo) |
 | Fix an error I'm getting | [Fixing Common Problems](info-vault/06-fixing-common-problems.md) |
 | Undo something | [Undoing Things](info-vault/06-fixing-common-problems.md#undoing-things) |
 
