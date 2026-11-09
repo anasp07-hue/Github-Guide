@@ -42,6 +42,7 @@ git push
 | `git config --global core.editor "code --wait"` | Use VS Code instead of Vim |
 | `git config --global pull.rebase false` | Make `git pull` merge (avoids the "divergent branches" error) |
 | `gh auth login` | Sign in to GitHub so you can push |
+| `gh auth status` | Check you're signed in (and as which account) |
 
 ---
 
@@ -108,6 +109,18 @@ git push -u origin <branch>              # 4. push it
 git switch main && git pull              # 7. update local main
 git branch -d <branch>                   # 8. clean up
 ```
+
+---
+
+## Forks
+
+ Full guide: [Pull Requests → Forks](05-pull-requests.md#forks-contributing-to-someone-elses-repo)
+
+| Command | What it does |
+|---|---|
+| `gh repo fork <owner/repo> --clone` | Fork a repo you can't push to, and clone your copy |
+| `git remote add upstream <original-url>` | Link the original repo (once) |
+| `git pull upstream main` | Get the original repo's latest changes |
 
 ---
 

@@ -12,7 +12,7 @@
 | # | Page | Sections | Time |
 |---|------|----------|------|
 | 1 | [What Are Git & GitHub?](01-what-is-git-and-github.md) | Git vs. GitHub · The Big Picture · Words You'll Hear · Why Bother? | 5 min |
-| 2 | [One-Time Setup](02-setup.md) | Create an Account · Install Git · Set Your Name & Email · Sign In So You Can Push | 10 min |
+| 2 | [One-Time Setup](02-setup.md) | Already Set Up? · Create an Account · Install Git · Set Your Name & Email · Sign In So You Can Push | 10 min |
 | 3 | [Clone, Commit, Pull, Push](03-clone-commit-pull-push.md) | `clone` · `status` · `add` · `commit` · `push` · `pull` · Putting It All Together · See Your History | 10 min |
 
 ## Part 2: Working With Others
@@ -20,14 +20,14 @@
 | # | Page | Sections | Time |
 |---|------|----------|------|
 | 4 | [Branches](04-branches.md) | What Is a Branch? · The Branch Workflow · Commands · Naming Branches · Common Branch Issues | 8 min |
-| 5 | [Pull Requests (PRs)](05-pull-requests.md) | Why "Pull" Request? · The PR Lifecycle · Step by Step · Group Project Workflow | 8 min |
+| 5 | [Pull Requests (PRs)](05-pull-requests.md) | Why "Pull" Request? · The PR Lifecycle · Step by Step · Group Project Workflow · Forks | 8 min |
 
 ## Part 3: Help & Reference
 
 | # | Page | Sections | Time |
 |---|------|----------|------|
 | 6 | [Fixing Common Problems](06-fixing-common-problems.md) | Push Rejected · Merge Conflicts · Authentication Failed · Undoing Things · Not a Git Repository · Stuck in Vim · Committed a Password | 10 min |
-| ⭐ | [**Cheatsheet**](cheatsheet.md) | Everyday Loop · Setup · Saving · Syncing · Branches · PR Flow · Undo · Error → Fix · Golden Rules | n/a |
+| ⭐ | [**Cheatsheet**](cheatsheet.md) | Everyday Loop · Setup · Saving · Syncing · Branches · PR Flow · Forks · Undo · Error → Fix · Golden Rules | n/a |
 
 ---
 
