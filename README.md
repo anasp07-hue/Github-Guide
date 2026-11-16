@@ -1,5 +1,18 @@
 # Intro to Git & GitHub for CS Students
 
+<details>
+<summary><b>▶ Wait, what's a README?</b></summary>
+
+<br>
+
+A **README** is the front page of a repo, and you're reading one right now. It's a file named `README.md` in the repo's main folder, and GitHub automatically displays it below the file list when you open the repo.
+
+It usually explains what the project is, how to set it up or run it, and where to find things. When you land on an unfamiliar repo, read the README first. For your own assignments and projects, it's where you tell your professor or teammates how to run your code.
+
+The `.md` stands for **Markdown**, a simple way to format plain text (for example, `# Title` makes a heading and `**bold**` makes **bold** text).
+
+</details>
+
 > **Your professor said "submit it on GitHub" and nobody showed you how.** This guide fixes that.
 
 A short, skimmable beginner's guide to Git and GitHub: cloning, committing, pulling, pushing, branches, and pull requests. It includes diagrams, a cheatsheet, and "press for more detail" dropdowns so you can skim first and dig in only when you need to.
